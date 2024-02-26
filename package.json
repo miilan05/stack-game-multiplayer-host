@@ -4,7 +4,7 @@
     "description": "",
     "main": "scripts.js",
     "scripts": {
-        "develop": "concurrently \"npm run socket-server\" \"npm run sass-watch\" \"npm run webpack-dev\"",
+        "develop": "concurrently \"npm run sass-watch\" \"npm run webpack-dev\"",
         "socket-server": "nodemon server/server.js",
         "sass-watch": "sass --watch src/styles/main.scss dist/style.css",
         "webpack-dev": "webpack-dev-server",

@@ -17,7 +17,7 @@ export default class SocketClient {
     }
 
     connect() {
-        this.socket = io("http://10.1.1.105:0000", {
+        this.socket = io("https://stack-server.fly.dev", {
             withCredentials: true,
             extraHeaders: {
                 "my-custom-header": "abcd"

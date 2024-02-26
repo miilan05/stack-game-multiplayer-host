@@ -1,3 +1,4 @@
+// implement jquery
 export default class domHandler {
     static addUiToPlayer(playerInstance) {
         playerInstance.innerHTML +=
@@ -19,10 +20,25 @@ export default class domHandler {
 
     static removePhoneScreen() {
         document.getElementById("phone").remove();
-        console.log();
     }
 
     static showPhoneScreen() {
         document.body.innerHTML += '<h1 id="phone">Click to load game</h1>';
+    }
+
+    static rematchRecieved(btn) {
+        btn.innerHTML = "Accept Rematch";
+    }
+
+    static rematchInitiated(btn) {
+        btn.innerHTML = "Rematch";
+        document.getElementById("button-wrapper2").style.display = "none";
+    }
+    static bothLost() {
+        document.getElementById("button-wrapper2").style.display = "block";
+    }
+
+    static opponentDisconnected(btn) {
+        btn.disabled = true;
     }
 }
